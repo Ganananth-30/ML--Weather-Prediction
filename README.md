@@ -143,6 +143,8 @@ for target in targets:
 
 ## Output:
 
+
+
 <img width="1401" height="603" alt="Screenshot 2026-03-18 143802" src="https://github.com/user-attachments/assets/365b684e-f21c-4473-909d-c462c5f6f83d" />
 
 
