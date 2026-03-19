@@ -144,8 +144,8 @@ for target in targets:
 ## Output:
 <img width="1401" height="603" alt="Screenshot 2026-03-18 143802" src="https://github.com/user-attachments/assets/365b684e-f21c-4473-909d-c462c5f6f83d" />
 <img width="1165" height="434" alt="Screenshot 2026-03-18 143844" src="https://github.com/user-attachments/assets/255c812b-00c4-427d-9276-4e65274badfa" />
-<img width="1234" height="565" alt="Screenshot 2026-03-18 143902" src="https://github.com/user-attachments/assets/32250e53-af1c-45ff-8bc3-47f9dea174e0" />
 
+<img width="1537" height="687" alt="Screenshot 2026-03-19 181541" src="https://github.com/user-attachments/assets/df635ccd-863e-4736-8dbd-a8329911c6d2" />
 
 
 
