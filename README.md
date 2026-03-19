@@ -85,6 +85,7 @@ train, test = processed_df.iloc[:split_idx], processed_df.iloc[split_idx:]
 X_train, X_test = train[features], test[features]
 
 
+
 models = {}
 results = {}
 
@@ -94,6 +95,7 @@ target_meta = {
     'pm2_5': ('Pollution (PM2.5)', 'µg/m³', 'green'),
     'tsr': ('Energy (Solar Radiation)', 'W/m²', 'orange')
 }
+
 
 
 for target in targets:
@@ -118,6 +120,7 @@ for target in targets:
 fig, axes = plt.subplots(3, 2, figsize=(16, 18))
 
 
+
 for i, target in enumerate(targets):
     label, unit, color = target_meta[target]
     res = results[target]
@@ -138,8 +141,11 @@ for i, target in enumerate(targets):
     axes[i, 1].set_title(f"Key Drivers: {label}")
 
 
+
+
 plt.tight_layout()
 plt.show()
+
 
 
 
@@ -150,6 +156,8 @@ latest_data = pd.DataFrame([{
     'hour_sin': last_row['hour_sin'], 'hour_cos': last_row['hour_cos'],
     'tem_lag1': last_row['tem'], 'pm2_5_lag1': last_row['pm2_5'], 'tsr_lag1': last_row['tsr']
 }])
+
+
 
 
 print("\n--- NEXT STEP PREDICTIONS (Using Latest Data) ---")
