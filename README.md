@@ -95,6 +95,7 @@ target_meta = {
     'tsr': ('Energy (Solar Radiation)', 'W/m²', 'orange')
 }
 
+
 for target in targets:
     y_train, y_test = train[target], test[target]
     
@@ -116,10 +117,12 @@ for target in targets:
 
 fig, axes = plt.subplots(3, 2, figsize=(16, 18))
 
+
 for i, target in enumerate(targets):
     label, unit, color = target_meta[target]
     res = results[target]
     
+
 
     axes[i, 0].plot(res['actual'][-150:], label='Actual', color='black', alpha=0.4, linewidth=2)
     axes[i, 0].plot(res['preds'][-150:], label='Predicted', color=color, linestyle='--', linewidth=2)
@@ -127,14 +130,17 @@ for i, target in enumerate(targets):
     axes[i, 0].set_ylabel(unit)
     axes[i, 0].legend()
     axes[i, 0].grid(True, alpha=0.3)
+
     
 
     importances = pd.Series(models[target].feature_importances_, index=features).sort_values()
     importances.plot(kind='barh', ax=axes[i, 1], color=color, alpha=0.7)
     axes[i, 1].set_title(f"Key Drivers: {label}")
 
+
 plt.tight_layout()
 plt.show()
+
 
 
 last_row = processed_df.iloc[-1]
@@ -144,6 +150,7 @@ latest_data = pd.DataFrame([{
     'hour_sin': last_row['hour_sin'], 'hour_cos': last_row['hour_cos'],
     'tem_lag1': last_row['tem'], 'pm2_5_lag1': last_row['pm2_5'], 'tsr_lag1': last_row['tsr']
 }])
+
 
 print("\n--- NEXT STEP PREDICTIONS (Using Latest Data) ---")
 for target in targets:
